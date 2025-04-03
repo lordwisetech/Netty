@@ -1,8 +1,6 @@
-To align the image properly in your README, you'll want to make sure the markdown is formatted correctly and the image is sized appropriately. Here's an improved version of your README with the image properly included and styled.
 
-### Adjusted README with Proper Image Alignment
 
-```markdown
+
 # Netty - Networking Web App
 
 Netty is a modern networking web application built using Django and JavaScript. This project allows users to connect, manage posts, and interact with other users. It’s designed to offer an interactive and engaging experience while also making it suitable for desktop and laptop use (currently not optimized for mobile devices).
@@ -99,23 +97,3 @@ At the moment, Netty is optimized for desktop and laptop devices only. If you op
 
 ![Netty - Networking App](https://github.com/lordwisetech/Netty/issues/1#issue-2969720440)
 
-```
-
-### Key Points:
-1. **Image inclusion**: You can use the Markdown syntax for images `![alt-text](image-url)` to properly add images. 
-   
-   The format is: 
-   ```markdown
-   ![Image Description](image-link)
-   ```
-
-2. **Alignment**: If you want the image centered in the README, GitHub automatically aligns images to the left by default, but you can control its placement by using HTML if needed.
-
-For centering the image with HTML:
-```html
-<p align="center">
-   <img width="954" alt="socialnetwork" src="https://github.com/lordwisetech/Netty/issues/1#issue-2969720440">
-</p>
-```
-
-This will ensure the image is centered and displayed neatly within your README file.
