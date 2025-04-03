@@ -1,109 +1,121 @@
+To align the image properly in your README, you'll want to make sure the markdown is formatted correctly and the image is sized appropriately. Here's an improved version of your README with the image properly included and styled.
 
-Netty - Networking Web App
+### Adjusted README with Proper Image Alignment
+
+```markdown
+# Netty - Networking Web App
+
 Netty is a modern networking web application built using Django and JavaScript. This project allows users to connect, manage posts, and interact with other users. It’s designed to offer an interactive and engaging experience while also making it suitable for desktop and laptop use (currently not optimized for mobile devices).
 
-Features
-User Authentication: Users can sign up, log in, and log out.
+## Features
+- **User Authentication**: Users can sign up, log in, and log out.
+- **Create Posts**: Users can create and share posts.
+- **Follow Other Users**: Users can follow others to stay updated with their content.
+- **Saved Posts**: Users can save posts for later viewing.
+- **User Profiles**: Each user has their own profile where they can manage their information.
+- **Responsive Layout**: Optimized for desktop and laptop users (mobile optimization is currently in progress).
 
-Create Posts: Users can create and share posts.
+## Getting Started
 
-Follow Other Users: Users can follow others to stay updated with their content.
-
-Saved Posts: Users can save posts for later viewing.
-
-User Profiles: Each user has their own profile where they can manage their information.
-
-Responsive Layout: Optimized for desktop and laptop users (mobile optimization is currently in progress).
-
-Getting Started
 To get a local copy of the project up and running, follow these simple steps:
 
-Prerequisites
-Python 3.x
+### Prerequisites
+- Python 3.x
+- Django (for backend development)
+- JavaScript (for frontend features)
+- SQLite or PostgreSQL for the database (Django comes with SQLite by default)
 
-Django (for backend development)
+### Installation
 
-JavaScript (for frontend features)
-
-SQLite or PostgreSQL for the database (Django comes with SQLite by default)
-
-Installation
 Clone the repository:
 
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/yourusername/netty.git
 cd netty
+```
+
 Create a virtual environment:
 
-bash
-Copy
-Edit
+```bash
 python -m venv venv
+```
+
 Activate the virtual environment:
 
-On Windows:
+- On Windows:
+    ```bash
+    venv\Scripts\activate
+    ```
 
-bash
-Copy
-Edit
-venv\Scripts\activate
-On macOS/Linux:
+- On macOS/Linux:
+    ```bash
+    source venv/bin/activate
+    ```
 
-bash
-Copy
-Edit
-source venv/bin/activate
 Install the required dependencies:
 
-bash
-Copy
-Edit
+```bash
 pip install -r requirements.txt
+```
+
 Apply database migrations:
 
-bash
-Copy
-Edit
+```bash
 python manage.py migrate
+```
+
 Create a superuser to access the admin panel (optional but recommended):
 
-bash
-Copy
-Edit
+```bash
 python manage.py createsuperuser
+```
+
 Run the development server:
 
-bash
-Copy
-Edit
+```bash
 python manage.py runserver
-Open your browser and go to http://127.0.0.1:8000/ to see the app in action.
+```
 
-Usage
-User Signup: Users can register for an account using the signup page.
+Open your browser and go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to see the app in action.
 
-Login/Logout: Users can log in with their credentials, or log out to end their session.
+## Usage
+- **User Signup**: Users can register for an account using the signup page.
+- **Login/Logout**: Users can log in with their credentials, or log out to end their session.
+- **Create Post**: After logging in, users can create new posts.
+- **Follow Users**: Follow other users to stay updated with their content.
+- **Save Posts**: Users can save posts they like for later.
+- **Profile Management**: Users can update their profile picture and personal details from their profile page.
 
-Create Post: After logging in, users can create new posts.
-
-Follow Users: Follow other users to stay updated with their content.
-
-Save Posts: Users can save posts they like for later.
-
-Profile Management: Users can update their profile picture and personal details from their profile page.
-
-Mobile Compatibility
+## Mobile Compatibility
 At the moment, Netty is optimized for desktop and laptop devices only. If you open the site on a mobile device, you will see a message saying the app is not optimized for mobile usage.
 
-Technologies Used
-Backend: Django
+## Technologies Used
+- **Backend**: Django
+- **Frontend**: HTML, CSS, JavaScript
 
-Frontend: HTML, CSS, JavaScript
+## App Preview
 
+### Screenshot:
 
+![Netty - Networking App](https://github.com/lordwisetech/Netty/issues/1#issue-2969720440)
 
+```
 
+### Key Points:
+1. **Image inclusion**: You can use the Markdown syntax for images `![alt-text](image-url)` to properly add images. 
+   
+   The format is: 
+   ```markdown
+   ![Image Description](image-link)
+   ```
 
-<img width="954" alt="socialnetwork" src="https://github.com/lordwisetech/Netty/issues/1#issue-2969720440">
+2. **Alignment**: If you want the image centered in the README, GitHub automatically aligns images to the left by default, but you can control its placement by using HTML if needed.
+
+For centering the image with HTML:
+```html
+<p align="center">
+   <img width="954" alt="socialnetwork" src="https://github.com/lordwisetech/Netty/issues/1#issue-2969720440">
+</p>
+```
+
+This will ensure the image is centered and displayed neatly within your README file.
