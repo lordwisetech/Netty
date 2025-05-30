@@ -48,45 +48,72 @@ svg{
     vertical-align: text-top;
 }
 
-
+/* Side Nav Base Styles */
 .sidenav {
     height: 100%;
-    width: 21.8%;
+    width: 250px;
+    max-width: 80%;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 15px;
-    list-style: none;
-    border-right: .5px solid #e6ecf0;
-    z-index: 100;
-    padding-left: 3%;
+    padding: 15px 3%;
     background-color: white;
+    border-right: .5px solid #e6ecf0;
+    z-index: 200;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Start hidden off-screen on mobile */
+@media (max-width: 768px) {
+    .sidenav {
+        transform: translateX(-100%);
+    }
+
+    .sidenav.active {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 300;
+        font-size: 24px;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
     
 }
 
-    
-
-.sidenav ul{
+/* Your existing nav styling */
+.sidenav ul {
     list-style: none;
-    padding-left: 0px;
+    padding-left: 0;
     margin-top: 3vh;
 }
-.sidenav li{
+
+.sidenav li {
     margin-top: 7px;
 }
-.sidenav .nav-link{
+
+.sidenav .nav-link {
     color: #14171a;
     line-height: .7em;
     font-weight: 700;
-    padding: 0px;
+    padding: 0;
 }
-.sidenav .nav-link > div{
+
+.sidenav .nav-link > div {
     padding: 10px 20px 8px 12px;
     border-radius: 25px;
     line-height: 0.9em;
     width: max-content;
 }
-.sidenav .nav-link > div:hover{
+
+.sidenav .nav-link > div:hover {
     color: #17bf63;
     background-color: #e7f8ef;
     transition-duration: .2s;
@@ -94,28 +121,77 @@ svg{
 
 
 
-.new-post-btn{
-    padding-left: 55px !important;
-    padding-right: 55px !important;
-    font-size: .95em;
-    font-weight: 530;
+/* --- Button Styling --- */
+.new-post-btn {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px 0;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #28a745;
+    color: white;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 24px !important;
+    transition: background-color 0.3s;
 }
-.user_account{
+
+.new-post-btn:hover {
+    background-color: #218838;
+}
+
+/* --- Account Info --- */
+.user_account {
     display: flex;
-    font-size: .82rem;
-    font-weight: normal;
-    padding-top: 3px !important;
-    padding-bottom: 3px !important;
-    padding-left: 3px !important;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    padding: 8px 12px;
+    border-radius: 25px;
+    transition: background 0.2s;
+    cursor: pointer;
 }
-.user_account .small-profilepic{
-    transform: scale(.82);
-    margin-left: auto;
-    margin-top: auto;
+
+.user_account:hover {
+    background-color: #f5f8fa;
 }
-.active a{
+
+/* --- Profile Pic Bubble --- */
+.user_account .small-profilepic {
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* --- Name block --- */
+.user_account div {
+    line-height: 1.2;
+}
+
+.user_account strong {
+    display: block;
+    font-weight: 600;
+}
+
+.user_account .grey {
+    color: #657786;
+    font-size: 0.78rem;
+}
+
+/* --- Active Nav Link --- */
+.active a {
     color: #28a745 !important;
+}
+
+/* --- Bottom Box Wrapper --- */
+.sidenav-bottom-box {
+    position: absolute;
+    bottom: 20px;
+    width: 85%;
 }
 
 
@@ -125,8 +201,8 @@ svg{
     width: 47.25%;
     min-height: 100vh;
     left: 21.8%;
-    /*display: flex;
-    flex-basis: auto;*/
+    display: flex;
+    flex-basis: auto;
 }
 .left-div{
     position: relative;
@@ -549,64 +625,56 @@ svg{
     z-index: 0;
 }
 
-
-
-
-.right-div{
+/* Default right-div layout */
+.right-div {
     width: 28%;
     height: 100vh;
     position: fixed;
     right: 2.95%;
-    border-left: .5px solid #e6ecf0;
+    border-left: 0.5px solid #e6ecf0;
     background-color: white;
+    transition: right 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
 }
-.right-div .head{
-    padding: .9vh 1.5vw;
-}
-.right-div .search-div{
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    /*width: min-content;*/
-    border-radius: 25px;
-    background-color: #e6ecf0;
-    padding-left: 10px;
-    padding-right: 10px;
-    vertical-align: middle;
-}
-#search-box{
-    height: 5.7vh;
+
+/* Mobile Toggle Button */
+.suggestion-toggle {
+    display: none;
+    position: fixed;
+    /* bottom: 20px; */
+    top: 10px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 50px;
     border: none;
-    background: none;
-    outline: none;
-    width: 100%;
-    margin-left: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1100;
 }
-#search-box::placeholder{
-    color: #6d7e8c;
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .right-div {
+        right: -100%; /* Hide off-screen */
+        width: 80%;
+        border-left: none;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    }
+
+    .right-div.active {
+        right: 0; /* Slide in when toggled */
+    }
+
+    .suggestion-toggle {
+        display: block;
+    }
 }
 
 
-.right-div-content{
-    height: 92.5vh;
-    overflow: auto;
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
-}
-.suggestion-box, .guest-box{
-    border-radius: 15px;
-    overflow: hidden;
-    background-color: #f5f8fa;
-}
-.user-details #user-name:hover{
-    text-decoration: underline;
-}
-.suggestion-header{
-    padding: 13px 15px;
-    line-height: .9em;
-    font-weight: 800;
-    border-bottom: .5px solid #e6ecf0;
-}
+
+
 .suggestion-user{
     display: flex;
     padding: 10px 15px;
@@ -807,11 +875,11 @@ svg{
     margin-bottom: 15px;
 }
 
-/*.blackout{
+.blackout{
     width: 100vw;
     height: 100vh;
     z-index: 10000;
-}*/
+}
 
 ::-webkit-scrollbar-track {
     background: none;
@@ -826,30 +894,3 @@ svg{
 }
 
 
-.mobile-message {
-    display: none;
-    text-align: center;
-    padding: 20px;
-    background: #ffebee;
-    border: 2px solid #ffcdd2;
-    border-radius: 8px;
-    margin: 20px;
-}
-
-.mobile-message h2 {
-    color: #c62828;
-    font-size: 20px;
-}
-
-/* Show Mobile Message Only on Small Screens */
-@media (max-width: 768px) {
-    .body {
-        display: none;
-    }
-    .popup {
-        display: none;
-    }
-    .mobile-message {
-        display: block;
-    }
-}
