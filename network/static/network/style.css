@@ -196,14 +196,7 @@ svg{
 
 
 
-.main-div{
-    position: relative;
-    /* width: 47.25%; */
-    min-height: 100vh;
-    left: 21.8%;
-    display: flex;
-    flex-basis: auto;
-}
+
 .left-div{
     position: relative;
 }
@@ -218,7 +211,7 @@ svg{
     border-bottom: .5px solid #e6ecf0;
     line-height: .7em;
     font-weight: 800;
-    /* background-color: #fff; */
+    background-color: #fff;
     z-index: 1000;
 }
 
@@ -637,6 +630,16 @@ svg{
     z-index: 1000;
 }
 
+
+.main-div{
+    position: relative;
+    width: 47.25%;
+    min-height: 100vh;
+    left: 21.8%;
+    display: flex;
+    flex-basis: auto;
+}
+
 /* Mobile Toggle Button */
 .suggestion-toggle {
     display: none;
@@ -670,10 +673,17 @@ svg{
     .suggestion-toggle {
         display: block;
     }
+            
+        .main-div{ 
+            width:fit-content;
+            left: 1px;
+        }
+
+      
+
+     
+        
 }
-
-
-
 
 .suggestion-user{
     display: flex;
@@ -795,6 +805,10 @@ svg{
     animation-duration: .2s;
     animation-fill-mode: forwards;
 }
+
+
+
+
 .large-popup{
     display: none;
     position: absolute;
@@ -810,9 +824,9 @@ svg{
     animation-name: large_popup;
     animation-duration: .2s;
     animation-fill-mode: forwards;
-}
+} 
 .large-popup div{
-    display: flex;
+    display: block;
 }
 .large-popup form{
     margin-top: 5px;
