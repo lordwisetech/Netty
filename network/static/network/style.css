@@ -658,7 +658,7 @@ svg{
 }
 
 /* Mobile styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 568px) {
     .right-div {
         right: -100%; /* Hide off-screen */
         width: 80%;
@@ -679,11 +679,81 @@ svg{
             left: 1px;
         }
 
+    /* .large-popup div{
+    
+   
+     }
+     .large-popup{
+        padding-left: 40px;
+        margin-right: 50px;
+
+     } */
       
 
      
         
 }
+
+
+
+
+
+/* Mobile: below 768px */
+@media (max-width: 768px) {
+  .large-popup {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .sub-large-pupup {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .small-profilepic {
+    width: 40px;
+    height: 40px;
+  }
+
+  textarea#post-text {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .form-action-btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .submit-btn,
+  .cancel-post {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+/* Ultra small phones: below 480px */
+@media (max-width: 480px) {
+  .large-popup {
+    padding: 10px;
+  }
+
+  textarea#post-text {
+    font-size: 0.95em;
+  }
+
+  .form-action-btns {
+    gap: 6px;
+  }
+
+  .form-icon-btn span {
+    display: none; /* Hide "Photo" text if cramped */
+  }
+}
+
+
+
+
 
 .suggestion-user{
     display: flex;
